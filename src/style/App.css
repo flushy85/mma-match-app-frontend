@@ -1,0 +1,128 @@
+.app-container {
+  text-align: center;
+  background-image: url("../assets/265019.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.page-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  height: fit-content;
+  min-height: 100vh;
+  min-width: 750px;
+  background-color: rgba(255, 255, 255, 0.781);
+  position: relative;
+}
+
+
+
+.notification {
+  position: fixed;
+  bottom: 10px;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  left: 10%;
+  color: white;
+  font-family: 'Alfa Slab One', cursive;
+  width: fit-content;
+  max-width: 18vw;
+  display: flex;
+  text-align: justify;
+  animation: fadeIn;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo > h1 {
+  font-size: 5rem;
+}
+
+.icon-box {
+ position: relative;
+ right: 22%;
+ bottom: 15px;
+}
+.icon {
+  width: 5rem;
+  height: auto;
+  background-color: white;
+}
+
+@media (max-width: 500px){
+  .logo {
+    max-width: 50vw;
+  }
+  
+  .logo > h1 {
+    font-size: 2.5rem;
+  }
+  .icon{
+    width: 2.5rem;
+  }
+}
+
+.page-title {
+  padding: 30px;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: antiquewhite;
+  background-color: black;
+}
+
+
+@media only screen and (max-width: 500px){
+  .page-container{
+    padding: 80px 0px 0px 0px;
+    min-width: 100vw;
+  }
+
+  .page-title{
+    font-size: 2em;
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+    transform: scale(0.4)
+  }
+  60% {
+    
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}

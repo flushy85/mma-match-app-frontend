@@ -1,0 +1,17 @@
+.brand {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.5em;
+}
+
+.nav-icon {
+  background-color: white;
+  margin-left: 5px;
+}
+
+
+.nav-link {
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+

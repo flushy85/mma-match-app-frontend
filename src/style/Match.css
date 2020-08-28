@@ -1,0 +1,106 @@
+.match-image-box {
+  display: flex;
+  padding-top: 50px;
+}
+
+.fighterA-box {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.match-image {
+  border-radius: 5px;
+  width: 50%;
+}
+
+#fighterA-image {
+  border: #247BFF solid 5px;
+  margin: 0px 50px 50px 10px;
+}
+
+#fighterB-image {
+  border: #DC3545 solid 5px;
+  margin: 0px 10px 50px 50px;
+}
+
+.compare-box-wrapper{
+  width: 100%;
+}
+
+.compare-box {
+  margin: 1rem 3rem;
+  padding: 0.5em;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  background-color: #ECECEC;
+}
+
+
+.progress-bar {
+  animation: progress; 
+  animation-duration: 2s;
+  animation-timing-function: ease-in; 
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.total-bar-wrapper {
+  height: 2rem;
+  border: solid 2px;
+}
+
+.total-bar {
+  animation: progress; 
+  animation-duration: 2s;
+  animation-timing-function: ease-in; 
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+
+.percent-box {
+  width: 90%;
+  padding: 1em;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  background-color: #ECECEC;
+}
+
+#fighterA-percent{
+  float: left;
+  animation-name: slamIn;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+  margin-left: 3rem;
+  font-family: 'Alfa Slab One', cursive;
+}
+#fighterB-percent{
+  float: right;
+  animation-name: slamIn;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-delay: 3.5s;
+  animation-fill-mode: backwards;
+  margin-right: 3rem;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+@keyframes progress{
+  from{width: 50%;}
+}
+
+@keyframes slamIn{
+  0%{
+    transform: scale(3);
+    opacity: 0;
+  }
+  90%{
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  
+}

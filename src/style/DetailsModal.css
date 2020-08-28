@@ -1,0 +1,53 @@
+.data-card {
+  background-color: rgba(255, 255, 255, 0.781);
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+
+.fighter-title {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.text-box {
+  font-size: 1em;
+  margin-left: 10px;
+  display: block;
+  padding-top: 15px;
+  height: fit-content;
+}
+
+
+
+.image-box {
+  display: flex;
+  min-width: 260px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.fighter-image {
+  border-radius: 5px;
+}
+
+.modal-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modal-button {
+  margin: 10px;
+}
+
+
+
+@media only screen and (min-width: 1000px){
+  .modal-button-box {
+    position: absolute;
+  }
+}

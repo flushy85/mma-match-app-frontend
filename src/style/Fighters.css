@@ -1,0 +1,54 @@
+
+.fighters-form {
+  display: flex;
+  align-items: center;
+  padding: 30px 0px;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  width: 85%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 400px;
+  
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  min-width: 150px;
+  
+}
+@media only screen and (max-width: 500px){
+  .fighters-form{
+    padding: 30px;
+  }
+}
+
+.weight-title {
+  padding: 20px;
+}
+
+.fighters-list-container {
+  
+}
+.table-responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.name-table {
+  max-width: 450px;
+  
+}
+.list-names {
+  color: black;
+}
+
+.list-names:hover {
+  color: grey;
+}

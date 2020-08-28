@@ -1,0 +1,107 @@
+
+.fight-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 10px; 
+}
+.list-item{
+  margin:.4rem .2rem;
+  min-width: 57.109px;
+}
+
+
+
+.events-box-closed {
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  max-height: 130px;
+  animation-name: slideIn;
+  animation-duration: .7s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 500px){
+  .events-box-closed{
+    max-height: 190px;
+   
+  }
+   
+}
+
+.events-box-open {
+  overflow: hidden;
+  max-height: 130px;
+  margin-bottom: 20px;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  animation-name: slideOut;
+  animation-duration: .7s; 
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.list-item-win{
+  background-color: rgb(132, 184, 56);
+  color: white;
+}
+
+.list-item-loss{
+  background-color: #DC3545;
+  color: white;
+}
+
+
+
+.noData-msg {
+  color: black;
+}
+
+.stat-box-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 20px;
+}
+.stat-box {
+  margin-bottom: 20px;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  padding: 2rem;
+  width: 40%;
+}
+
+@keyframes slideOut{
+  to{max-height:450px;}
+}
+
+@keyframes slideIn{
+  from{max-height: 450px;}
+}
+
+.barchart-container{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+@media (max-width: 500px){
+  .barchart-container{
+    width: 100%;
+  }
+}
+
+.d3-component{
+  margin: 40px 0px 40px 0px;
+  border-width: .2rem .2rem 0;
+  border-radius: 8px 8px;
+  border: .2rem solid #ECECEC;
+  height: auto;
+  width: 280px;
+}
