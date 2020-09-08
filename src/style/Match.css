@@ -1,12 +1,25 @@
 .match-image-box {
   display: flex;
-  padding-top: 50px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 2rem 0 0 0;
+  padding: 0.5em;
+  width: 100%;
+  font-family: 'Alfa Slab One', cursive;
 }
 
-.fighterA-box {
+.match-image-boxA {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+}
+
+.match-image-boxB {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .match-image {
@@ -15,35 +28,90 @@
 }
 
 #fighterA-image {
-  border: #247BFF solid 5px;
-  margin: 0px 50px 50px 10px;
+  -webkit-box-shadow: #fff 0 -1px 4px, rgb(0, 255, 234) 0 -2px 10px,
+    #00a2ff 0 -10px 20px, rgb(36, 123, 255) 0 -18px 40px,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, rgb(0, 238, 255) 0 -2px 10px,
+    #00a2ff 0 -10px 20px, rgb(36, 123, 255) 0 -18px 40px,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: #ecefcf;
 }
 
 #fighterB-image {
-  border: #DC3545 solid 5px;
-  margin: 0px 10px 50px 50px;
+  -webkit-box-shadow: #fff 0 -1px 4px, rgb(243, 200, 200) 0 -2px 10px,
+    #fd4c4c 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, rgb(243, 200, 200) 0 -2px 10px,
+    #fd4c4c 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: #ecefcf;
 }
 
-.compare-box-wrapper{
+.fighter-name {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.compare-box-wrapper {
   width: 100%;
 }
 
 .compare-box {
   margin: 1rem 3rem;
   padding: 0.5em;
-  border-width: .2rem .2rem 0;
+  border-width: 0.2rem 0.2rem 0;
   border-radius: 8px 8px;
-  border: .2rem solid #ECECEC;
-  background-color: #ECECEC;
+  border: 0.2rem solid #ececec;
+  background-color: #ececec;
 }
 
+.main-compare-box {
+  margin: 1rem 0.2rem 1rem 0.2rem;
+  padding: 0.5rem;
+  border-width: 0.2rem 0.2rem 0;
+  border-radius: 8px 8px;
+  border: 0.2rem solid #ececec;
+  background-color: #ececec;
+}
 
 .progress-bar {
-  animation: progress; 
+  animation: progress;
   animation-duration: 2s;
-  animation-timing-function: ease-in; 
+  animation-timing-function: ease-in;
   animation-delay: 1s;
   animation-fill-mode: backwards;
+}
+
+.progress {
+  background: #247bff;
+  background: -moz-linear-gradient(left, #247bff 0%, #00a2ff 50%, #c1eaf5 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #247bff 0%,
+    #00a2ff 50%,
+    #c1eaf5 100%
+  );
+  background: linear-gradient(to right, #247bff 0%, #00a2ff 50%, #c1eaf5 100%);
+}
+
+.danger {
+  background: #ff2137;
+  background: -moz-linear-gradient(
+    left,
+    rgb(243, 200, 200) 0%,
+    #fd4c4c 50%,
+    #ff2137 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(243, 200, 200) 0%,
+    #fd4c4c 50%,
+    #ff2137 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(243, 200, 200) 0%,
+    #fd4c4c 50%,
+    #ff2137 100%
+  );
 }
 
 .total-bar-wrapper {
@@ -52,9 +120,9 @@
 }
 
 .total-bar {
-  animation: progress; 
+  animation: progress;
   animation-duration: 2s;
-  animation-timing-function: ease-in; 
+  animation-timing-function: ease-in;
   animation-delay: 3s;
   animation-fill-mode: backwards;
 }
@@ -62,26 +130,26 @@
 .percent-box {
   width: 90%;
   padding: 1em;
-  border-width: .2rem .2rem 0;
+  border-width: 0.2rem 0.2rem 0;
   border-radius: 8px 8px;
-  border: .2rem solid #ECECEC;
-  background-color: #ECECEC;
+  border: 0.2rem solid #ececec;
+  background-color: #ececec;
 }
 
-#fighterA-percent{
+#fighterA-percent {
   float: left;
   animation-name: slamIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in;
   animation-delay: 3s;
   animation-fill-mode: backwards;
   margin-left: 3rem;
   font-family: 'Alfa Slab One', cursive;
 }
-#fighterB-percent{
+#fighterB-percent {
   float: right;
   animation-name: slamIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in;
   animation-delay: 3.5s;
   animation-fill-mode: backwards;
@@ -89,18 +157,38 @@
   font-family: 'Alfa Slab One', cursive;
 }
 
-@keyframes progress{
-  from{width: 50%;}
+.back-button {
+  margin-top: 30px;
 }
 
-@keyframes slamIn{
-  0%{
+@media only screen and (max-width: 500px) {
+  .compare-box {
+    margin: 0.1rem 1.5rem;
+    padding: 0.25rem 0.25rem 0 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .fighter-name {
+    font-size: 1rem;
+  }
+  .match-image {
+    width: 80%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 50%;
+  }
+}
+
+@keyframes slamIn {
+  0% {
     transform: scale(3);
     opacity: 0;
   }
-  90%{
+  90% {
     transform: scale(0.8);
     opacity: 1;
   }
-  
 }

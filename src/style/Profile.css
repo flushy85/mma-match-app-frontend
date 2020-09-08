@@ -7,7 +7,11 @@
   border-bottom: solid 1px;
   border-top: solid 1px;
   justify-content: center;
-  position: relative;
+  margin-top: 30px;
+}
+
+.match-title {
+  width: 100%;
 }
 
 .match-box-container {
@@ -18,35 +22,25 @@
   align-items: flex-end;
 }
 
-.match-box{  
+.match-box {
   min-height: 45px;
   width: 12rem;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  border-radius: 5px;
 }
-
-@media only screen and (max-width: 500px){
-  .match-container{
-    padding: 20px 10px 10px;
-    width: 100%;
-  }
-  .match-button {
-    margin: .5rem 0 0;
-    justify-self: center;
-  }
+.active {
+  background-color: rgba(255, 243, 80, 0.589);
 }
-
 
 .match-text {
   font-family: 'Alfa Slab One', cursive;
   font-size: 1.2em;
   padding: 0px 10px;
   margin-block-end: 0;
-  
 }
-
 
 .button-true {
   background-color: white;
@@ -57,10 +51,27 @@
 }
 
 .button-false {
-  background-color: #DC3545;
+  background-color: #dc3545;
   display: inline-block;
 }
 
 .button-false:focus {
-  background-color: #DC3545;
+  background-color: #dc3545;
+}
+
+.table-responsive {
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .match-container {
+    padding: 20px 10px 10px;
+    width: 100%;
+  }
+  .match-button {
+    margin: 0.5rem 0 0;
+  }
+  .clear-button {
+    margin: 0 0 0.5rem 0;
+  }
 }

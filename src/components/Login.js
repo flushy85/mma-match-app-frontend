@@ -9,7 +9,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 const Login = ({ setUser, setMessage }) => {
   const [username, setUserName] = useState('')
   const [password, setPassword] = useState('')
-
+  const history = useHistory()
   const handleLogin = async (event) => {
     event.preventDefault()
     try {
@@ -30,7 +30,7 @@ const Login = ({ setUser, setMessage }) => {
         favorites: user.favorites,
       })
       //need to change window.location to use react-router
-      window.location.href = `/user/${user.username}`
+      history.push(`/user/${user.username}`)
     } catch (exception) {
       console.log('wrong credentials')
       setMessage('wrong username or password')
@@ -41,7 +41,7 @@ const Login = ({ setUser, setMessage }) => {
   }
 
   return (
-    <div className='login-container'>
+    <div>
       <Form onSubmit={handleLogin} className='login-form'>
         <h3 className='form-title'>Login</h3>
         <Form.Group controlId='formBasicUserName'>
