@@ -38,7 +38,7 @@ const getKoHandicap = (data) => {
       : (data.losses.knockouts / data.losses.total) * 100
 
   let koHandicap = koWinPercent - koLossPercent
-  return koHandicap
+  return koHandicap < 0 ? koHandicap * -1 : koHandicap
 }
 
 const getSubHandicap = (data) => {
@@ -52,7 +52,7 @@ const getSubHandicap = (data) => {
       : (data.losses.submissions / data.losses.total) * 100
 
   let subHandicap = subWinPercent - subLossPercent
-  return subHandicap
+  return subHandicap < 0 ? subHandicap * -1 : subHandicap
 }
 
 const getTimeHandicap = (data) => {
@@ -69,8 +69,6 @@ const getTimeHandicap = (data) => {
   const avgFightWinTime = totalTime / data.wins.total
   return avgFightWinTime
 }
-
-const getStyleHandicap = (data) => {}
 
 export default {
   getAgeHandicap,

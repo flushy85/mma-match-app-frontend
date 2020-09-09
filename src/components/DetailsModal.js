@@ -8,7 +8,6 @@ import Container from 'react-bootstrap/Container'
 import { Link, useParams } from 'react-router-dom'
 import fighterService from '../services/fighter-service'
 import userService from '../services/user-service'
-import { ReactComponent as FistIcon } from '../assets/sports_mma-24px.svg'
 
 function DetailsModal({
   data,
@@ -35,7 +34,7 @@ function DetailsModal({
       }
       fetchDetails()
     }
-  }, [fullName])
+  }, [fullName, setData])
 
   const handleAddFavorite = async () => {
     try {

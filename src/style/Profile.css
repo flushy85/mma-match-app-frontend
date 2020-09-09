@@ -31,8 +31,22 @@
   justify-content: flex-end;
   border-radius: 5px;
 }
-.active {
-  background-color: rgba(255, 243, 80, 0.589);
+.activeA {
+  -webkit-box-shadow: #fff 0 -1px 4px, rgb(0, 255, 234) 0 -2px 10px,
+    #00a2ff 0 -10px 20px, rgb(36, 123, 255) 0 -18px 40px,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, rgb(0, 238, 255) 0 -2px 10px,
+    #00a2ff 0 -10px 20px, rgb(36, 123, 255) 0 -18px 40px,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: #ecefcf;
+}
+
+.activeB {
+  -webkit-box-shadow: #fff 0 -1px 4px, rgb(243, 200, 200) 0 -2px 10px,
+    #fd4c4c 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, rgb(243, 200, 200) 0 -2px 10px,
+    #fd4c4c 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: #ecefcf;
 }
 
 .match-text {

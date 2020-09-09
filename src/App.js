@@ -13,7 +13,6 @@ import {
   Switch,
   Route,
   useLocation,
-  useRouteMatch,
   useHistory,
 } from 'react-router-dom'
 import userService from './services/user-service'
@@ -35,7 +34,6 @@ const ModalSwitch = () => {
   const [favorites, setFavorites] = useState(null)
   const [active, setActive] = useState([])
 
-  let match = useRouteMatch()
   let location = useLocation()
   let history = useHistory()
 

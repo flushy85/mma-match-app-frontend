@@ -67,7 +67,8 @@ const Match = ({ active }) => {
       ])
     }
     fetchDetails(fighterA, fighterB)
-  }, [])
+  }, [fighterA, fighterB])
+
   if (fighters && handicap) {
     return (
       <div className='page-container'>

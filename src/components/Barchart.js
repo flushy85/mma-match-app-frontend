@@ -1,9 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
-import { scaleLinear } from 'd3-scale'
-import { max } from 'd3-array'
-import { select } from 'd3-selection'
-import { svg } from 'd3'
 
 const Barchart = ({ data }) => {
   const d3Container = useRef(null)
@@ -98,7 +94,7 @@ const Barchart = ({ data }) => {
         .text(data[0].win ? 'Wins' : 'Losses')
         .style('font-size', '1.5rem')
     }
-  }, [data, d3Container.current])
+  }, [data, h, margin.left, margin.top, w])
 
   return <svg className='d3-component' ref={d3Container} />
 }

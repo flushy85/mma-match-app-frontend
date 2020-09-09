@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import '../style/Navbar.css'
@@ -6,8 +6,6 @@ import { ReactComponent as FistIcon } from '../assets/sports_mma-24px.svg'
 import { Link } from 'react-router-dom'
 
 const NavigationBar = ({ user, handleLogout }) => {
-  const [show, setShow] = useState(false)
-
   return (
     <Navbar
       className='navbar'

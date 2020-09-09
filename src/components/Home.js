@@ -15,12 +15,12 @@ const Home = () => {
         <div className='link-button-container'>
           <div className='link-button'>
             <a href='placeholder.com'>
-              <i class=' link-button fa fa-github-square fa-lg'></i>
+              <i className=' link-button fa fa-github-square fa-lg'></i>
             </a>
           </div>
           <div className='link-button'>
             <a href='placeholder.com'>
-              <i class='link-button fa fa-envelope-square fa-lg'></i>
+              <i className='link-button fa fa-envelope-square fa-lg'></i>
             </a>
           </div>
         </div>

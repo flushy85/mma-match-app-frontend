@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import '../style/login.css'
 import loginService from '../services/login'
 import userService from '../services/user-service'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const Login = ({ setUser, setMessage }) => {
   const [username, setUserName] = useState('')

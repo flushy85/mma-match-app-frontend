@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { useLocation, useRouteMatch } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Table from 'react-bootstrap/Table'
 import Spinner from 'react-bootstrap/Spinner'
 import Favorites from '../components/Favorites'
 import Button from 'react-bootstrap/Button'
 import userService from '../services/user-service'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../style/Profile.css'
 
 const Profile = ({
@@ -18,9 +18,8 @@ const Profile = ({
 }) => {
   useEffect(() => {
     userService.getOne(user.id).then((data) => setFavorites(data.favorites))
-  }, [user])
+  }, [user, setFavorites])
 
-  let { url } = useRouteMatch()
   let location = useLocation()
 
   const handleClick = (fighter) => {
@@ -48,11 +47,11 @@ const Profile = ({
             Clear
           </Button>
           <div className='match-box-container'>
-            <div className={active[0] ? 'match-box active' : 'match-box'}>
+            <div className={active[0] ? 'match-box activeA' : 'match-box'}>
               {active[0] ? active[0] : null}
             </div>
             <p className='match-text'>Vs</p>
-            <div className={active[1] ? 'match-box active' : 'match-box'}>
+            <div className={active[1] ? 'match-box activeB' : 'match-box'}>
               {active[1] ? active[1] : null}
             </div>
           </div>
@@ -71,8 +70,9 @@ const Profile = ({
           <Table striped responsive className='name-table'>
             <thead>
               <tr>
-                <th></th>
+                <th>Rank</th>
                 <th>Favorites</th>
+                <th>Select</th>
               </tr>
             </thead>
             <tbody>
